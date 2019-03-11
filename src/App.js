@@ -29,8 +29,7 @@ class App extends Component {
     const cartJSON = localStorage.getItem("cart");
     const cart = JSON.parse(cartJSON);
     //Random list of items from backend
-    const items = ['Tums(used)',
-         'Hibiscus Teabag (slightly damaged)', 'Puppy Doggy', 'Used Syringe', 'Turtle', 'Giraffe'];
+    const items = ['Tums(used)', 'Hibiscus Teabag (slightly damaged)', 'Puppy Doggy', 'Used Syringe', 'Turtle', 'Giraffe'];
     this.setState({ 
       cart: cart || [],
       items

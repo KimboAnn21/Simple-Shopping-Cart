@@ -6,6 +6,7 @@ export const Cart = ({items, removeFromCart}) => (
         <ul>
             {items.map((item, index) => (
                 <li key = {index} onClick = {removeFromCart(index)}>
+                {item}
                 </li>
             ))}
         </ul>
