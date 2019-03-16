@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { StyleSheet, css } from 'aphrodite/no-important'
 import './App.css';
+
 import {List} from "./Components/List";
 import {Cart} from "./Components/Cart";
 
@@ -48,4 +50,5 @@ class App extends Component {
 }
   const rootElement = document.getElementById("root");
   ReactDOM.render(<App/>, rootElement);
+
 export default App;
