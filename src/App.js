@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { StyleSheet, css } from 'aphrodite/no-important'
+import { StyleSheet, css } from 'aphrodite/no-important';
 import './App.css';
-
+import { Buttons } from './Components/Styles/Buttons';
+import { heading } from './Components/Styles/heading';
+import { IconButtons } from './Components/Styles/IconButtons';
+import { spacing } from './Components/Styles/spacing';
+import { styles } from './Components/Styles/styles';
 import {List} from "./Components/List";
 import {Cart} from "./Components/Cart";
-
+//import { tagMapping, fontSize, fontWeight, lineHeight } from './Components/Styles/heading';
 
 class App extends Component {
 
