@@ -1,3 +1,6 @@
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+
 function Button (props) {
     // Returns a DOM element here. For example:
     return <button type="submit">{props.label}</button>;

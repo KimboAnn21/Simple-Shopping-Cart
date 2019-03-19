@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom'
  const Navbar = ()=>{
     return(
@@ -15,6 +16,8 @@ import { Link } from 'react-router-dom'
             </nav>  
     )
 }
-
+const rootElement = document.getElementById("root");
+  ReactDOM.render(<App/>, rootElement);
+  
 export default Navbar;
 

@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 export const List = ({ addToCart, items }) => (
     <div>
@@ -13,3 +13,6 @@ export const List = ({ addToCart, items }) => (
             </ul>            
     </div>
 );
+
+const rootElement = document.getElementById("root");
+  ReactDOM.render(<App/>, rootElement);

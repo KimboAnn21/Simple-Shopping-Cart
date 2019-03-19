@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 export const Cart = ({items, removeFromCart}) => (
     <div>
@@ -12,4 +13,6 @@ export const Cart = ({items, removeFromCart}) => (
         </ol>
     </div>
 );
-  
+ 
+const rootElement = document.getElementById("root");
+  ReactDOM.render(<App/>, rootElement);
