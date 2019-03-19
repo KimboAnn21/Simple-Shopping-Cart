@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { StyleSheet, css } from 'aphrodite/no-important';
-import './App.css';
-import { Buttons } from './Components/Styles/Buttons';
-import { heading } from './Components/Styles/heading';
-import { IconButtons } from './Components/Styles/IconButtons';
-import { spacing } from './Components/Styles/spacing';
-import { styles } from './Components/Styles/styles';
-import {List} from "./Components/List";
-import {Cart} from "./Components/Cart";
-//import { tagMapping, fontSize, fontWeight, lineHeight } from './Components/Styles/heading';
+import { List } from "./Components/List";
+import { Cart } from "./Components/Cart";
+//import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
 
 class App extends Component {
 
@@ -34,8 +27,43 @@ class App extends Component {
     //This is what will call Local Storage
     const cartJSON = localStorage.getItem("cart");
     const cart = JSON.parse(cartJSON);
+
+
     //Random list of items from backend
-    const items = ['Tums(used)', 'Hibiscus Teabag (slightly damaged)', 'Puppy Doggy', 'Used Syringe', 'Turtle', 'Giraffe'];
+    let items = [
+      {
+        name: 'Tums(used)',
+        image: 'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1552771098/ThreeQuartersFullTums.jpg',
+        price: '$.35'
+      },
+       {
+         name: 'PuppyDog',
+         image:'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1552771098/PuppyDoggy.jpg',
+         price: 'Sold Out'
+       },
+       {
+         name: 'Teabag',
+         image:'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1552771098/SlightlyUsedTeabag.jpg',
+         price: '$72'
+        },
+       {
+         name: 'Used Syringe', 
+         image: 'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1552771098/UsedSyrings.jpg',
+         price: 'Free STD'
+       
+        },
+       {
+         name: 'Drag Queen Eyeglitter found in Women\'s Bathroom',
+         image: 'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1552771098/DragQueenEyeshadow.jpg',
+         price: 'Ummmm...d' 
+       },
+       {
+         name: 'DaisyCello',
+         image: 'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1552771098/DaisyCello.png',
+         price: '$1,000n' 
+       },
+    ];
+
     this.setState({ 
       cart: cart || [],
       items
@@ -45,7 +73,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Welcome</h1>
+        <h2>Sketchy Sale</h2>
         <List items = {this.state.items} addToCart = {this.addToCart}/>
         <Cart items = {this.state.cart} removeFromCart = {this.removeFromCart}/>
       </div>
