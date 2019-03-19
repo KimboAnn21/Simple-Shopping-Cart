@@ -11,6 +11,8 @@
     "babel-loader": "^8.0.5",
     "body-parser": "^1.18.3",
     "cloudinary-react": "^1.1.0",
+    "modules": "^0.4.0",
+    "node": "^11.12.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-router-dom": "^4.4.0",
