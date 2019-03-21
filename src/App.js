@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { List } from "./Components/List";
 import { Cart } from "./Components/Cart";
 //import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
@@ -7,7 +6,7 @@ import { Cart } from "./Components/Cart";
 class App extends Component {
 
   state = {
-    items: [], 
+    items: [],
     cart: []
   }
 
@@ -80,7 +79,5 @@ class App extends Component {
     );
   }
 }
-  const rootElement = document.getElementById("root");
-  ReactDOM.render(<App/>, rootElement);
 
 export default App;

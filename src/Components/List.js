@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import App from './App.js';
+import React from 'react';
 
 export const List = ({ addToCart, items }) => (
     <div>
@@ -8,12 +6,10 @@ export const List = ({ addToCart, items }) => (
             <ul>
                 {items.map((item, key) => (
                     <li key = {key} onClick = {addToCart(item)}>
-                        {item} 
+                        <div>{item.name}</div>
+                        <img height="100" src={item.image} />
                     </li>
                 ))}
             </ul>            
     </div>
 );
-
-const rootElement = document.getElementById("root");
-  ReactDOM.render(<App/>, rootElement);

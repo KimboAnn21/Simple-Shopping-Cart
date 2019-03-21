@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import App from './App.js';
+import React from 'react';
 
 export const Cart = ({items, removeFromCart}) => (
     <div>
@@ -8,12 +6,9 @@ export const Cart = ({items, removeFromCart}) => (
         <ol>
             {items.map((item, index) => (
                 <li key = {index} onClick = {removeFromCart(index)}>
-                {item}
+                {item.name}
                 </li>
             ))}
         </ol>
     </div>
 );
- 
-const rootElement = document.getElementById("root");
-  ReactDOM.render(<App/>, rootElement);

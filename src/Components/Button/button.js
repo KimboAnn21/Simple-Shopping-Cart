@@ -1,13 +1,6 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 
 function Button (props) {
     // Returns a DOM element here. For example:
     return <button type="submit">{props.label}</button>;
   }
-  
-  // To render a Button element in the browser
-  ReactDOM.render(
-    <Button label="AddToCart" />, 
-    document.getElementById('mountNode')
-  );

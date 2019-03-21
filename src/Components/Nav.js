@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom'
+import React from 'react';
 import { Link } from 'react-router-dom'
+
  const Navbar = ()=>{
     return(
             <nav className="nav-wrapper">
@@ -16,8 +16,6 @@ import { Link } from 'react-router-dom'
             </nav>  
     )
 }
-const rootElement = document.getElementById("root");
-  ReactDOM.render(<App/>, rootElement);
   
 export default Navbar;
 
