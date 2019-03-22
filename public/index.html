@@ -11,11 +11,78 @@
     
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     
-    <title>Kim's Boutique</title>
+    <title>Kim's Kart</title>
+    <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 10px;
+      color: #daa520;
+      background-color: #daa520;
+      padding: 10px;
+    }
+    
+    .grid-container > div {
+      background-color: #000;
+      text-align: center;
+      padding: 10px;
+      font-size: 20px;
+    }
+        body {
+          font-family: fantasy;
+        }
+        
+        .sidenav {
+          width: 100px;
+          position: fixed;
+          right: 0px;
+          z-index: 1;
+          top: 20px;
+          background: #000;
+          overflow-x: hidden;
+          padding: 8px 0;
+        }
+        
+        .sidenav a {
+          padding: 6px 8px 6px 16px;
+          text-decoration: none;
+          font-size: 18px;
+          color: #daa520;
+          display: block;
+        }
+        
+        .sidenav a:hover {
+          color: #064579;
+        }
+        
+        .main {
+          margin-right: 140px; /*Same width as the sidebar + left position in px*/ 
+          font-size: 28px; /* Increased text to enable scrolling */
+          font-family: fantasy;
+          padding: 0px 10px;
+        }
+        
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 10px;}
+          .sidenav a {font-size: 14px;}
+        }
+        </style>
   </head>
+  
   <body>
-    
-    <div id="root"></div>
-    
+      <div id="root"></div>
+        
+          <div class="sidenav">
+            <a href="#about">For Sale</a>
+            <a href="#cart">Cart</a>
+            <a href="#contact">Contact</a>
+          </div>
+              <div class="grid-container">
+                
+              </div>
+        <div class="main">
+
+        </div>  
+             
   </body>
 </html>

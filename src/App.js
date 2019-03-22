@@ -31,35 +31,41 @@ class App extends Component {
     //Random list of items from backend
     let items = [
       {
-        name: 'Tums(used)',
+        class: '1',
+        name: 'Tums-Open Container',
         image: 'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1552771098/ThreeQuartersFullTums.jpg',
-        price: '$.35'
+        price: '$.35',
       },
        {
-         name: 'PuppyDog',
+         class: '2',
+         name: 'Puppy Dog',
          image:'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1552771098/PuppyDoggy.jpg',
-         price: 'Sold Out'
+         price: '$12,400',
        },
        {
-         name: 'Teabag',
+         class: '3',
+         name: 'Slightly Used Teabag',
          image:'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1552771098/SlightlyUsedTeabag.jpg',
-         price: '$72'
+         price: '$72',
         },
        {
-         name: 'Used Syringe', 
+         class: '4',
+         name: 'Syringe from Unknown User', 
          image: 'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1552771098/UsedSyrings.jpg',
-         price: 'Free STD'
+         price: 'Free STD',
        
         },
        {
+         class: '5',
          name: 'Drag Queen Eyeglitter found in Women\'s Bathroom',
          image: 'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1552771098/DragQueenEyeshadow.jpg',
-         price: 'Ummmm...d' 
+         price: 'Ummmm...', 
        },
        {
-         name: 'DaisyCello',
+         class: '6',
+         name: 'Cello',
          image: 'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1552771098/DaisyCello.png',
-         price: '$1,000n' 
+         price: '$1,000', 
        },
     ];
 
@@ -72,9 +78,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2>Sketchy Sale</h2>
-        <List items = {this.state.items} addToCart = {this.addToCart}/>
-        <Cart items = {this.state.cart} removeFromCart = {this.removeFromCart}/>
+        <h2>Tempting, huh?</h2>
+          <div class="grid-container">
+            <List items = {this.state.items} addToCart = {this.addToCart} />
+
+            <Cart items = {this.state.cart} removeFromCart = {this.removeFromCart}/>
+          </div>
       </div>
     );
   }
