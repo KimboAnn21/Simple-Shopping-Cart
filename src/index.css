@@ -2,13 +2,13 @@ body {
   background-color:#000;
   margin: 0;
   padding: 0;
-  font-family: fantasy;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: fantasy;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .header {
   background-color: #000000;
@@ -17,42 +17,15 @@ code {
   padding: 10px;
   margin: 15px 0px 15px 0px;
 }
-/* The navbar container */
-.topnav {
-  overflow: hidden;
-  background-color: #daa520;
-}
-
-/* Navbar links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #daa520;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Links - change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-cart {
-  width: 140px;
-        position: relative;
-        right: 0px;
-        z-index: 1;
-        top: 20px;
-        left: 10px;
-        background: #000;
-        overflow-x: hidden;
-        padding: 8px 0;
-        font-family: fantasy;
-}
-
 h2 {
   text-align: center;
-  font-family: fantasy;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+ul {
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+  margin: 0;
+  display: grid;
+  justify-content: center;
 
+}

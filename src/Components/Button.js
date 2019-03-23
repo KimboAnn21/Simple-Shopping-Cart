@@ -16,9 +16,8 @@ function Button ({ children, ...props}) {
       borderColor: '#c6c7ca',
       color: '#5490ff', 
     },
-  };
+  }
 
-    // Returns a DOM element here. For example:
     return <button style={styles} type="submit" {...props}>{children}</button>;
   }
 
