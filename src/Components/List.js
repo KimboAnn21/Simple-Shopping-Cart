@@ -16,7 +16,7 @@ export const List = ({ addToCart, items }) => {
     }
     return (
         <div>
-            <h2>Boutique</h2>
+            <h2>For Sale</h2>
             <ul>
                 {items.map((item, key) => (
                     <li key={key} style={myStyle}>

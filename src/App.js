@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { List } from "./Components/List";
 import { Cart } from "./Components/Cart";
+import Home from "./Components/Home";
+import { Route, NavLink, HashRouter } from "react-router-dom";
+//import Data, { getCart } from "data.js"
 //import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
 
 
@@ -8,7 +11,8 @@ class App extends Component {
 
   state = {
     items: [],
-    cart: []
+    cart: [],
+    newItem: []
   }
 
   addToCart = item => () => {
@@ -23,10 +27,20 @@ class App extends Component {
     this.setState({cart: this.state.cart});
   }
 
+  addToCatalog = catalog => () => {
+    this.state.newItem(catalog, 1);
+    localStorage.setItem("cart", JSON.stringify(this.state.newItem));
+    this.setState({newItem: this.state.newItem });
+  }
+
   componentDidMount() {
     //This is what will call Local Storage
     const cartJSON = localStorage.getItem("cart");
     const cart = JSON.parse(cartJSON);
+    //getCart()
+      //.then(cart=>this.setState({
+        //cart: cart || []
+      //}))
 
 
     //Random list of items from backend
@@ -79,12 +93,26 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2>Tempting, huh?</h2>
-          <div class="grid-container">
+        <h2>
+          <div className="grid-container">
             <List items = {this.state.items} addToCart = {this.addToCart} />
-
             <Cart items = {this.state.cart} removeFromCart = {this.removeFromCart}/>
+            <HashRouter>
+              <div>
+                <ul className="header">
+                    <li><NavLink exact to="/home">Home</NavLink></li>
+                    <li><NavLink to="/cart">Cart</NavLink></li>
+                    <li><NavLink to="/list">List</NavLink></li>
+                </ul>
+                <div className="content">
+                    <Route exact path="/home" component={Home}/>
+                    <Route path="/cart" component={Cart}/>
+                    <Route path="/list" component={List}/>
+                </div>
+              </div>
+            </HashRouter>
           </div>
+        </h2>
       </div>
     );
   }

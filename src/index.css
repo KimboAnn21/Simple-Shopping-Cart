@@ -10,22 +10,38 @@ body {
 code {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.header {
-  background-color: #000000;
-  color: #daa520;
-  text-align: center;
-  padding: 10px;
-  margin: 15px 0px 15px 0px;
-}
+
 h2 {
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 ul {
-  list-style: none; /* Remove list bullets */
+  list-style: none; /* Removes list bullets */
   padding: 0;
-  margin: 0;
+  margin: 10px;
   display: grid;
   justify-content: center;
+}
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 5px;
+  color: #daa520;
+  background-color: #daa520;
+  padding: 4px;
+}
+
+.grid-container > div {
+  background-color: #000;
+  text-align: center;
+  padding: 0px;
+  font-size: 20px;
+}
+    
+.main {
+  margin-right: 140px; /*Same width as the sidebar + left position in px*/ 
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 4px;
 }
