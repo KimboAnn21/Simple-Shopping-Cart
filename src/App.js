@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { List } from "./Components/List";
 import { Cart } from "./Components/Cart";
-import Home from "./Components/Home";
+//import Home from "./Components/Home";
 import { Route, NavLink, HashRouter } from "react-router-dom";
 //import Data, { getCart } from "data.js"
 //import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
@@ -47,9 +47,9 @@ class App extends Component {
     let items = [
       {
         class: '1',
-        name: 'Tums-Open Container',
-        image: 'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1552771098/ThreeQuartersFullTums.jpg',
-        price: '$.35',
+        name: 'Takemeine 12-String Guitar',
+        image: 'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1554859660/Takemeine_12_String.png',
+        price: '$1,199.00'
       },
        {
          class: '2',
@@ -59,22 +59,22 @@ class App extends Component {
        },
        {
          class: '3',
-         name: 'Slightly Used Teabag',
-         image:'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1552771098/SlightlyUsedTeabag.jpg',
-         price: '$72',
+         name: 'Martin DC-28 1991',
+         image:'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1554859659/Martin_DC-28.png',
+         price: '$2,795.00',
         },
        {
          class: '4',
-         name: 'Syringe from Unknown User', 
-         image: 'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1552771098/UsedSyrings.jpg',
-         price: 'Free STD',
+         name: 'Marshall Acoustic Amp', 
+         image: 'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1554859658/MarshallAmp.png',
+         price: '$499.00',
        
         },
        {
          class: '5',
-         name: 'Drag Queen Eyeglitter found in Women\'s Bathroom',
-         image: 'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1552771098/DragQueenEyeshadow.jpg',
-         price: 'Ummmm...', 
+         name: 'Mesa Boogie Amp',
+         image: 'https://res.cloudinary.com/kimbolimbodesign/image/upload/v1554860178/Mesa_Boogie_Express_550_Front.png',
+         price: '$1,199.00', 
        },
        {
          class: '6',
@@ -100,14 +100,14 @@ class App extends Component {
             <HashRouter>
               <div>
                 <ul className="header">
-                    <li><NavLink exact to="/home">Home</NavLink></li>
-                    <li><NavLink to="/cart">Cart</NavLink></li>
-                    <li><NavLink to="/list">List</NavLink></li>
+                    <li><NavLink exact to="./home">Home</NavLink></li>
+                    <li><NavLink to="./cart">Photos</NavLink></li>
+                    <li><NavLink to="./list">Music</NavLink></li>
                 </ul>
                 <div className="content">
-                    <Route exact path="/home" component={Home}/>
-                    <Route path="/cart" component={Cart}/>
-                    <Route path="/list" component={List}/>
+                    <Route exact path="./home"/>
+                    <Route path="./cart" component={Cart}/>
+                    <Route path="./list" component={List}/>
                 </div>
               </div>
             </HashRouter>
