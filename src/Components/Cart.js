@@ -8,6 +8,7 @@ export const Cart = ({items, removeFromCart}) => (
             {items.map((item, index) => (
                 <li key = {index} onClick = {removeFromCart(index)}>
                 {item.name}
+                <i class="fas fa-trash-alt"></i>
                 </li>
             ))}
         </ol>

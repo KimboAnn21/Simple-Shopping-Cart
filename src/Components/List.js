@@ -1,8 +1,6 @@
 import React from 'react';
 import Button from "./Button";
 
-
-
 export const List = ({ addToCart, items }) => {
     let myStyle = {
         border: '2px solid black',
@@ -23,7 +21,8 @@ export const List = ({ addToCart, items }) => {
                         <div>{item.name}</div>
                         <img width="100" alt="Cart Items" src={item.image} />
                         <div>{item.price}</div>
-                        <Button onClick={addToCart(item)}>Add to cart</Button>
+                        <Button onClick={addToCart(item)}>Add to Basket</Button>
+                        <i class="fas fa-cart-plus"></i>
                     </li>
                 ))}
             </ul>
